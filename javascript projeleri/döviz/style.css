@@ -1,0 +1,111 @@
+/* Arka plan */
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Ortalamayı sağlayan container */
+.container {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Kartlar */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.01); /* Daha az hareket */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Başlık */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #ffda85;
+}
+
+/* Input ve select alanları */
+input, select {
+    background-color: rgba(255,255,255,0.1) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    background-color: rgba(255,255,255,0.18) !important;
+    box-shadow: 0 0 8px #ffda85 !important;
+}
+
+::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Çıktı alanı */
+#outputResult {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Buton stili */
+button, .btn {
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(45deg, #ffd200, #f7971e);
+    transform: scale(1.02);
+}
+
+/* Select görünümü */
+.select-wrapper input.select-dropdown {
+    color: white !important;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.dropdown-content {
+    background-color: #2b2a40;
+}
+
+.dropdown-content li > span {
+    color: white;
+}
+
+.dropdown-content li:hover {
+    background-color: rgba(255,255,255,0.1);
+}
